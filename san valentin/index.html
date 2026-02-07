@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PARA TU CONEJITO</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body><div id="decoraciones"></div>
+  <div class="canvas-wrapper">
+    <img src="images/hoja1.png" id="mainImage" class="canva-image" alt="Sorpresa">
+
+    <!-- Hoja 1 -->
+    <div class="click-zone heart-zone"></div>
+
+    <!-- Hoja 4 -->
+    <div class="click-zone btn1"></div>
+    <div class="click-zone btn2"></div>
+    <div class="click-zone btn3"></div>
+  </div>
+
+  <script src="script.js"></script>
+<script>
+const decor = document.getElementById("decoraciones");
+
+// pétalos
+for (let i = 0; i < 20; i++) {
+  const p = document.createElement("div");
+  p.className = "petalo";
+  p.style.left = Math.random() * 100 + "vw";
+  p.style.animationDuration = 6 + Math.random() * 6 + "s";
+  decor.appendChild(p);
+}
+
+// chispas
+for (let i = 0; i < 30; i++) {
+  const c = document.createElement("div");
+  c.className = "chispa";
+  c.style.left = Math.random() * 100 + "vw";
+  c.style.top = Math.random() * 100 + "vh";
+  decor.appendChild(c);
+}
+</script>
+</body>
+</html>
